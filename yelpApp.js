@@ -20,7 +20,8 @@ var commentRoutes   =require("./Routes/comments");
 var campgroundRoutes= require("./Routes/campgrounds");
 var authRoutes       = require("./Routes/Auth");
 //YELP APP VARIABLE TRIGGERS 
-mongoose.connect('mongodb://localhost:/Yelp_camp',{ useNewUrlParser: true });
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true });
+// mongoose.connect('mongodb://localhost:/Yelp_camp',{ useNewUrlParser: true });
 App.use(bodyParser.urlencoded({extended:true}));
 App.set("view engine","ejs");
 // moment().format();
