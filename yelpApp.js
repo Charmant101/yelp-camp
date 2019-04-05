@@ -15,14 +15,14 @@ var Comment         = require("./models/comments");
 var methodOverride  = require("method-override");
 var seedDB          = require("./seed");
 
-// TO REQUIRE CREATED ROUTES
+// TO REQUIRE CREATED ROUTES 
 var commentRoutes   =require("./Routes/comments");
 var campgroundRoutes= require("./Routes/campgrounds");
 var authRoutes       = require("./Routes/Auth");
 //YELP APP VARIABLE TRIGGERS 
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true });
 // mongoose.connect('mongodb+srv://Oladele:oladele@cluster0-11zml.mongodb.net/test?retryWrites=true', {useNewUrlParser: true});
-// mongoose.connect('mongodb://localhost:/Yelp_camp',{ useNewUrlParser: true });i
+// mongoose.connect('mongodb://localhost:/Yelp_camp',{ useNewUrlParser: true });
 App.use(bodyParser.urlencoded({extended:true}));
 App.set("view engine","ejs");
 // moment().format();
